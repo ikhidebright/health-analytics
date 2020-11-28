@@ -102,7 +102,7 @@ export default {
           icon: "/icons/report.png",
           title: "Feedbacks",
           to: "/inspire"
-        },
+        }
         // {
         //   icon: "/icons/bell.png",
         //   title: "Notifications",
