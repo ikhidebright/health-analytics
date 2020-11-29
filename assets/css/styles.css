@@ -1,0 +1,10 @@
+.card-top {
+  margin-top: 20vh;
+}
+.right-top {
+  margin-top: 40vh;
+}
+.place-center {
+  display: grid;
+  place-items: center;
+}

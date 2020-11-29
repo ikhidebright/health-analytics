@@ -90,19 +90,19 @@ export default {
           iconActive: "/icons/gauge.png",
           icon: "/icons/dashboard.png",
           title: "Dashboard",
-          to: "/dashboard"
+          to: "/account/login"
         },
         {
           iconActive: "/icons/company-ac.png",
           icon: "/icons/companies.png",
-          title: "Semantic Area",
+          title: "Thematic Area",
           to: "/companies"
         },
         {
           icon: "/icons/report.png",
           title: "Feedbacks",
           to: "/inspire"
-        },
+        }
         // {
         //   icon: "/icons/bell.png",
         //   title: "Notifications",
