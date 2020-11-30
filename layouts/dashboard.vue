@@ -96,7 +96,7 @@ export default {
           iconActive: "/icons/company-ac.png",
           icon: "/icons/companies.png",
           title: "Semantic Area",
-          to: "/companies"
+          to: "/questions?q=fp"
         },
         {
           icon: "/icons/report.png",
