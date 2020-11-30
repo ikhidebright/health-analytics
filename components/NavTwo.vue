@@ -46,14 +46,26 @@
                       </div>
 
                       <ul class="main-nav">
-                        
-                                                  <li><nuxt-link to="/">Thematic Area</nuxt-link>
-                                                      <ul>
-                                                          <li class="active"><nuxt-link to="/index2">Hiv Questions</nuxt-link></li>
-                                                          <li class="active"><nuxt-link to="/index2">Family Planning Questions</nuxt-link></li>
-                                                          <li class="active"><nuxt-link to="/index2">Delivery Questions</nuxt-link></li>
-                                                      </ul>
-                                                  </li>
+                        <li>
+                          <nuxt-link to="/">Thematic Area</nuxt-link>
+                          <ul>
+                            <li class="active">
+                              <nuxt-link to="/questions?q=hiv"
+                                >Hiv Questions</nuxt-link
+                              >
+                            </li>
+                            <li class="active">
+                              <nuxt-link to="/questions?q=fp"
+                                >Family Planning Questions</nuxt-link
+                              >
+                            </li>
+                            <li class="active">
+                              <nuxt-link to="/index2"
+                                >Delivery Questions</nuxt-link
+                              >
+                            </li>
+                          </ul>
+                        </li>
                       </ul>
                     </div>
                     <!-- End of Header-menu -->

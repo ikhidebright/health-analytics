@@ -95,24 +95,20 @@ export default {
         {
           iconActive: "/icons/company-ac.png",
           icon: "/icons/companies.png",
-          title: "Semantic Area",
+          title: "Hiv",
+          to: "/questions?q=hiv"
+        },
+        {
+          iconActive: "/icons/company-ac.png",
+          icon: "/icons/companies.png",
+          title: "Family planing",
           to: "/questions?q=fp"
         },
         {
           icon: "/icons/report.png",
           title: "Feedbacks",
-          to: "/inspire"
-        },
-        // {
-        //   icon: "/icons/bell.png",
-        //   title: "Notifications",
-        //   to: "/inspire"
-        // },
-        // {
-        //   icon: "/icons/help.png",
-        //   title: "Help",
-        //   to: "/inspire"
-        // }
+          to: "/questions?q=fp"
+        }
       ],
       miniVariant: false,
       right: true,
