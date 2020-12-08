@@ -1,5 +1,3 @@
-import colors from "vuetify/es5/util/colors";
-
 export default {
   // mode: "universal",
   ssr: true,
@@ -47,28 +45,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
-  // modules: [
-  //   [
-  //     "nuxt-i18n",
-  //     {
-  //       locales: ["en", "es"],
-  //       defaultLocale: "en",
-  //       vueI18n: {
-  //         fallbackLocale: "en",
-  //         messages: {
-  //           en: {
-  //             greeting: "Hello world!"
-  //           },
-  //           es: {
-  //             greeting: "¡Hola mundo!"
-  //           }
-  //         }
-  //       }
-  //     }
-  //   ]
-  // ],
-
+  plugins: [
+    {
+      src: "~/plugins/highcharts.js",
+      ssr: true
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -89,27 +71,7 @@ export default {
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: "#f77ade",
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        },
-        light: {
-          primary: "#f77ade",
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
+      dark: false
     }
   }
 };

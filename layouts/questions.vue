@@ -26,11 +26,18 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <!-- <div @click="googleTranslate" id="google_translate">
+        <div class="language-picker">
+          <button><p class="change">Change language</p></button>
+        </div>
+      </div> -->
     </v-navigation-drawer>
 
     <v-app-bar :clipped-left="clipped" fixed app color="#613DD0">
       <v-app-bar-nav-icon v-if="isMobile" @click.stop="drawer = !drawer" />
-
+      <div @click="googleTranslateElementInit" id="google_translate_element">
+        <button><p class="language">Language</p></button>
+      </div>
       <div class="nav-container" v-if="!isMobile">
         <v-btn
           v-for="(item, index) in navbarItems"
@@ -55,6 +62,16 @@
 
 <script>
 export default {
+  head() {
+    return {
+      script: [
+        {
+          src:
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        }
+      ]
+    };
+  },
   data() {
     return {
       clipped: false,
@@ -87,7 +104,19 @@ export default {
   methods: {
     routeTo(route) {
       this.$router.push(route);
+    },
+    googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
     }
+    // googleTranslate() {
+    //   new google.translate.TranslateElement(
+    //     { pageLanguage: "en" },
+    //     "google_translate"
+    //   );
+    // }
   },
   computed: {
     isMobile() {
@@ -98,6 +127,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.change {
+  margin-left: 16px;
+}
+.language {
+  color: white;
+  margin-top: 2.5vh;
+  margin-right: 50px;
+  // font-size: 11px;
+}
 .nav-container {
   width: 100%;
   display: flex;

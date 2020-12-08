@@ -3,11 +3,15 @@
     <v-navigation-drawer v-model="drawer" :clipped="clipped" fixed light app>
       <v-row justify="center" class="mt-9">
         <!-- <p class="h d-inline">H</p> -->
-        <p class="r d-inline">Qualityofcare</p>
+        <p class="r d-inline">
+          <nuxt-link to="/">
+            Qualityofcare
+          </nuxt-link>
+        </p>
       </v-row>
       <v-row justify="center">
-        <v-avatar size="125">
-          <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
+        <v-avatar size="180">
+          <v-img src="/logo.jpeg"></v-img>
         </v-avatar>
       </v-row>
       <v-row justify="center" class="mb-0 ml-n3">
@@ -55,6 +59,11 @@
         append-icon="mdi-magnify"
       ></v-text-field>
       <v-spacer />
+      <div @click="googleTranslateElementInit" id="google_translate_element">
+        <div class="language-picker">
+          <button><p class="change">Change language</p></button> |
+        </div>
+      </div>
       <v-btn class="mx-7 rounded-lg pa-5" color="white" depressed shaped>
         <v-badge color="#9E5DB8" offset-x="11" dot overlap>
           <v-icon color="#003187">mdi-bell-outline</v-icon>
@@ -100,29 +109,25 @@ export default {
           iconActive: "/icons/gauge.png",
           icon: "/icons/dashboard.png",
           title: "Dashboard",
-          to: "/account/login"
+          to: "/dashboard"
         },
         {
           iconActive: "/icons/company-ac.png",
           icon: "/icons/companies.png",
-          title: "Thematic Area",
-          to: "/companies"
+          title: "Hiv",
+          to: "/questions?q=hiv"
+        },
+        {
+          iconActive: "/icons/company-ac.png",
+          icon: "/icons/companies.png",
+          title: "Family planing",
+          to: "/questions?q=fp"
         },
         {
           icon: "/icons/report.png",
           title: "Feedbacks",
-          to: "/inspire"
+          to: "/questions?q=fp"
         }
-        // {
-        //   icon: "/icons/bell.png",
-        //   title: "Notifications",
-        //   to: "/inspire"
-        // },
-        // {
-        //   icon: "/icons/help.png",
-        //   title: "Help",
-        //   to: "/inspire"
-        // }
       ],
       miniVariant: false,
       right: true,
@@ -145,6 +150,10 @@ export default {
 </script>
 
 <style scoped>
+.change {
+  color: red;
+  margin-top: 3vh;
+}
 .main-content {
   background-color: #f4f4f4;
   min-height: 89vh;

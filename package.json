@@ -1,8 +1,8 @@
 {
-  "name": "jironis",
+  "name": "qualityofcare",
   "version": "1.0.0",
-  "description": "Jironis - Vue Nuxt App Landing One Page Template",
-  "author": "Layerdrops",
+  "description": "Qualityofcare - Number one Health analytics platform",
+  "author": "qualityofcare",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,6 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "highcharts": "^8.2.2",
+    "highcharts-vue": "^1.3.5",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.15.4",
     "swiper": "^5.3.7",

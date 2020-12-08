@@ -6,14 +6,14 @@
           <div class="col-md-8 col-lg-6 col-xl-5">
             <!-- banner text -->
             <div class="banner-text-inner">
-              <div
+              <!-- <div
                 @click="googleTranslateElementInit"
                 id="google_translate_element"
               >
                 <div class="language-picker">
                   <button><p class="red">Change language</p></button> |
                 </div>
-              </div>
+              </div> -->
               <h1>Qualityofcare is for your health feedback</h1>
               <p>
                 A platform that is meant to give feedback to Hospital managemnet
@@ -83,16 +83,16 @@
 <script>
 export default {
   name: "BannerTwo",
-  head() {
-    return {
-      script: [
-        {
-          src:
-            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        }
-      ]
-    };
-  },
+  //   head() {
+  //     return {
+  //       script: [
+  //         {
+  //           src:
+  //             "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  //         }
+  //       ]
+  //     };
+  //   },
 
   methods: {
     googleTranslateElementInit() {
