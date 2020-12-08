@@ -23,6 +23,15 @@
                   A platform that is meant to give feedback to Hospital
                   management when a client visits the hospital
                 </p>
+                <div
+                  @click="googleTranslateElementInit"
+                  id="google_translate_element"
+                  class="d-inline"
+                >
+                  <button>
+                    <p class="red d-inline">Change language</p>
+                  </button>
+                </div>
                 <!-- footer social area -->
                 <div class="footer-social-area">
                   <ul class="social-icons social-icons-light nav">
@@ -98,6 +107,7 @@
                       @Qualityofcare Get accurate health statistics for Nigeria
                       <br /><a href="#">http://yhdj58.tp8/JK</a>
                     </div>
+
                     <div class="twetter-post">
                       <span><i class="fa fa-twitter"></i></span>
                       Qualityofcare - {{ new Date().getFullYear() }}
@@ -126,6 +136,16 @@
 <script>
 export default {
   name: "Footer",
+  head() {
+    return {
+      script: [
+        {
+          src:
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        }
+      ]
+    };
+  },
   data() {
     return {
       scrollBtn: false
@@ -136,6 +156,12 @@ export default {
   },
 
   methods: {
+    googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    },
     handleScroll() {
       if (window.scrollY > 70) {
         this.scrollBtn = true;
@@ -154,5 +180,9 @@ export default {
 <style scoped>
 .icon {
   font-size: 11px;
+}
+.red {
+  color: red;
+  font-weight: bold;
 }
 </style>

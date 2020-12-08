@@ -3,11 +3,15 @@
     <v-navigation-drawer v-model="drawer" :clipped="clipped" fixed light app>
       <v-row justify="center" class="mt-9">
         <!-- <p class="h d-inline">H</p> -->
-        <p class="r d-inline">Qualityofcare</p>
+        <p class="r d-inline">
+          <nuxt-link to="/">
+            Qualityofcare
+          </nuxt-link>
+        </p>
       </v-row>
       <v-row justify="center">
-        <v-avatar size="125">
-          <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
+        <v-avatar size="180">
+          <v-img src="/logo.jpeg"></v-img>
         </v-avatar>
       </v-row>
       <v-row justify="center" class="mb-0 ml-n3">
@@ -55,6 +59,11 @@
         append-icon="mdi-magnify"
       ></v-text-field>
       <v-spacer />
+      <div @click="googleTranslateElementInit" id="google_translate_element">
+        <div class="language-picker">
+          <button><p class="change">Change language</p></button> |
+        </div>
+      </div>
       <v-btn class="mx-7 rounded-lg pa-5" color="white" depressed shaped>
         <v-badge color="#9E5DB8" offset-x="11" dot overlap>
           <v-icon color="#003187">mdi-bell-outline</v-icon>
@@ -80,6 +89,16 @@
 
 <script>
 export default {
+  head() {
+    return {
+      script: [
+        {
+          src:
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        }
+      ]
+    };
+  },
   data() {
     return {
       clipped: false,
@@ -118,11 +137,23 @@ export default {
   },
   mounted() {
     console.log(this.$route);
+  },
+  methods: {
+    googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    }
   }
 };
 </script>
 
 <style scoped>
+.change {
+  color: red;
+  margin-top: 3vh;
+}
 .main-content {
   background-color: #f4f4f4;
   min-height: 89vh;

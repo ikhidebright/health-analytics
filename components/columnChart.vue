@@ -46,15 +46,15 @@ export default {
         },
         series: [
           {
-            name: "Tokyo",
+            name: "Abuja",
             data: [10103, 9690]
           },
           {
-            name: "New York",
+            name: "Lagos",
             data: [8043, 3749]
           },
           {
-            name: "London",
+            name: "Kaduna",
             data: [8523, 544]
           }
         ]
