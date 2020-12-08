@@ -359,7 +359,7 @@ export const state = () => ({
       {
         title: 1,
         question:
-          "Did the health workers infor you about any serious complications that can occur as a result of using the family planning method for which you should come back to the SDP should such occur?",
+          "Did the health workers inform you about any serious complications that can occur as a result of using the family planning method for which you should come back to the SDP should such occur?",
         options: ["Yes", "No"],
         questionType: 0,
         answer: ""
