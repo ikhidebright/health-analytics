@@ -1,5 +1,8 @@
 <template>
   <div>
+<<<<<<< HEAD
+    <h1>Hello world</h1>
+=======
     <!-- <v-row class="pa-0 ml-2">
       <v-col v-for="data in inforData" :key="data.id">
         <infoCard :data="data" />
@@ -13,6 +16,7 @@
         <columnChart />
       </v-col>
     </v-row>
+>>>>>>> 8f2b450b1ae17681a5bf8b08cc86be573145a606
   </div>
 </template>
 
@@ -22,8 +26,11 @@ import pieChart from "@/components/pieChart";
 // import infoCard from "@/components/dashboard/infoCard";
 
 export default {
+<<<<<<< HEAD
+  layout: "dashboard"
+=======
   name: "dashboard",
-  layout: "dashboard",
+  layout: 'dashboard',
   data() {
     return {
       inforData: [
@@ -60,8 +67,9 @@ export default {
   },
   components: {
     columnChart,
-    pieChart
+    pieChart,
     // infoCard
   }
+>>>>>>> 8f2b450b1ae17681a5bf8b08cc86be573145a606
 };
 </script>

@@ -90,29 +90,25 @@ export default {
           iconActive: "/icons/gauge.png",
           icon: "/icons/dashboard.png",
           title: "Dashboard",
-          to: "/account/login"
+          to: "/dashboard"
         },
         {
           iconActive: "/icons/company-ac.png",
           icon: "/icons/companies.png",
-          title: "Thematic Area",
-          to: "/companies"
+          title: "Hiv",
+          to: "/questions?q=hiv"
+        },
+        {
+          iconActive: "/icons/company-ac.png",
+          icon: "/icons/companies.png",
+          title: "Family planing",
+          to: "/questions?q=fp"
         },
         {
           icon: "/icons/report.png",
           title: "Feedbacks",
-          to: "/inspire"
+          to: "/questions?q=fp"
         }
-        // {
-        //   icon: "/icons/bell.png",
-        //   title: "Notifications",
-        //   to: "/inspire"
-        // },
-        // {
-        //   icon: "/icons/help.png",
-        //   title: "Help",
-        //   to: "/inspire"
-        // }
       ],
       miniVariant: false,
       right: true,
