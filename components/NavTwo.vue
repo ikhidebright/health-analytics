@@ -56,12 +56,12 @@
                             </li>
                             <li class="active">
                               <nuxt-link to="/questions?q=fp"
-                                >Family Planning Questions</nuxt-link
+                                >Family Planning</nuxt-link
                               >
                             </li>
                             <li class="active">
-                              <nuxt-link to="/index2"
-                                >Delivery Questions</nuxt-link
+                              <nuxt-link to="/questions?q=delivery"
+                                >Delivery</nuxt-link
                               >
                             </li>
                           </ul>

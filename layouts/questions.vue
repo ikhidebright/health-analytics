@@ -68,13 +68,18 @@ export default {
         },
         {
           icon: "mdi-apps",
-          name: "Family Planning Questions",
+          name: "Family Planning",
           route: "/questions?q=fp"
         },
         {
           icon: "mdi-apps",
-          name: "HIV Questions",
+          name: "HIV",
           route: "/questions?q=hiv"
+        },
+        {
+          icon: "mdi-apps",
+          name: "Delivery",
+          route: "/questions?q=delivery"
         }
       ]
     };

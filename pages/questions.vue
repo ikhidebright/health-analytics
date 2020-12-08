@@ -17,14 +17,22 @@ export default {
     Questions
   },
   computed: {
-    ...mapGetters(["getHIVQuestions", "getFamilyPlanningQuestions"]),
+    ...mapGetters([
+      "getHIVQuestions",
+      "getFamilyPlanningQuestions",
+      "getQualityImprovementSystemQuestions"
+    ]),
     feedbackQuestions() {
       if (this.$route.query.q === "hiv") return this.getHIVQuestions;
       if (this.$route.query.q === "fp") return this.getFamilyPlanningQuestions;
+      if (this.$route.query.q === "delivery")
+        return this.getQualityImprovementSystemQuestions;
     },
     category() {
       if (this.$route.query.q === "hiv") return "HIV";
       if (this.$route.query.q === "fp") return "Family Planning";
+      if (this.$route.query.q === "delivery")
+        return "Quality Improvement System";
     }
   }
 };
