@@ -41,12 +41,9 @@ export default {
           {
             name: "Share",
             data: [
-              { name: "Chrome", y: 61.41 },
-              { name: "Internet Explorer", y: 11.84 },
-              { name: "Firefox", y: 10.85 },
-              { name: "Edge", y: 4.67 },
-              { name: "Safari", y: 4.18 },
-              { name: "Other", y: 7.05 }
+              { name: "Hiv", y: 61.41 },
+              { name: "Family Planing", y: 23.07 },
+              { name: "Delivery", y: 15.52 }
             ]
           }
         ]

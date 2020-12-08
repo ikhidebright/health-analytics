@@ -23,29 +23,42 @@
                   A platform that is meant to give feedback to Hospital
                   management when a client visits the hospital
                 </p>
+                <div
+                  @click="googleTranslateElementInit"
+                  id="google_translate_element"
+                  class="d-inline"
+                >
+                  <button>
+                    <p class="red d-inline">Change language</p>
+                  </button>
+                </div>
                 <!-- footer social area -->
                 <div class="footer-social-area">
                   <ul class="social-icons social-icons-light nav">
-                    <li>
+                    <!-- <li>
                       <a href="#" target="_blank"
                         ><i class="fa fa-facebook-f"></i
                       ></a>
+                    </li> -->
+                    <li>
+                      <a
+                        href="https://twitter.com/Sulaiman2316059"
+                        target="_blank"
+                        ><i class="fa fa-twitter"></i>
+                      </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank"
-                        ><i class="fa fa-twitter"></i
-                      ></a>
+                      <a
+                        href="https://www.linkedin.com/in/sulaiman-gbadamosi-318a775b/"
+                        target="_blank"
+                        ><i class="fa fa-linkedin"></i>
+                      </a>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a href="#" target="_blank"
                         ><i class="fa fa-google-plus"></i
                       ></a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank"
-                        ><i class="fa fa-linkedin"></i
-                      ></a>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
                 <!-- End of footer social area -->
@@ -55,25 +68,31 @@
 
             <div class="col-lg-4 col-sm-6">
               <div class="footer-widget">
-                <!-- widget header -->
                 <div class="widget-header">
-                  <h5>Our Address</h5>
+                  <h5>Our Info</h5>
                 </div>
-                <!-- widget header -->
                 <div class="widget-body">
                   <ul class="address-list">
                     <li>
                       <span><i class="fa  fa-phone-square"></i></span>
-                      +2348081568665
+                      <a href="tel:+2348081568665">+2348081568665</a>
                     </li>
                     <li>
                       <span><i class="fa  fa-envelope"></i></span>
-                      info@qualityofcare.com.ng
+                      <a href="mailto:gbadamosi@gtechglobal.org"
+                        >gbadamosi@gtechglobal.org</a
+                      >
                     </li>
                     <li>
+                      <span><i class="fa  fa-envelope"></i></span>
+                      <a href="mailto:sulaimangbada@gmail.com"
+                        >sulaimangbada@gmail.com</a
+                      >
+                    </li>
+                    <!-- <li>
                       <span><i class="fa  fa-map"></i></span>
                       855 road, Opp Polaris Bank, Lugbe, Abuja
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </div>
@@ -88,9 +107,10 @@
                       @Qualityofcare Get accurate health statistics for Nigeria
                       <br /><a href="#">http://yhdj58.tp8/JK</a>
                     </div>
+
                     <div class="twetter-post">
                       <span><i class="fa fa-twitter"></i></span>
-                      Qualityofcare - Nov 23, 2020
+                      Qualityofcare - {{ new Date().getFullYear() }}
                     </div>
                   </div>
                 </div>
@@ -116,6 +136,16 @@
 <script>
 export default {
   name: "Footer",
+  head() {
+    return {
+      script: [
+        {
+          src:
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        }
+      ]
+    };
+  },
   data() {
     return {
       scrollBtn: false
@@ -126,6 +156,12 @@ export default {
   },
 
   methods: {
+    googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    },
     handleScroll() {
       if (window.scrollY > 70) {
         this.scrollBtn = true;
@@ -141,4 +177,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon {
+  font-size: 11px;
+}
+.red {
+  color: red;
+  font-weight: bold;
+}
+</style>

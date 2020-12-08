@@ -23,7 +23,7 @@ import pieChart from "@/components/pieChart";
 
 export default {
   name: "dashboard",
-  layout: 'dashboard',
+  layout: "dashboard",
   data() {
     return {
       inforData: [
@@ -60,7 +60,7 @@ export default {
   },
   components: {
     columnChart,
-    pieChart,
+    pieChart
     // infoCard
   }
 };

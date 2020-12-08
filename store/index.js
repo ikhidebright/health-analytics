@@ -577,12 +577,153 @@ export const state = () => ({
         answer: ""
       }
     ]
+  },
+  qualityImprovementSystem: {
+    title: ["Maternity"],
+    questions: [
+      {
+        title: 0,
+        question: "Were You Admitted on time in the Hospital",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question:
+          "Were You Provided Clean Bedsheets throughout your stay in the Hospital?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question: "Did the hospital accord you privacy during the delivery?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question:
+          "Did you receive support for mother-baby bending from the hospital staff?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question:
+          "Did you receive support to start breastfeeding within 30 minutes of the birth of your baby?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question: "were the hospital staff courteous & respectful to you?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question:
+          "was there effective communication with you and your family about the care provided?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question:
+          "Were you allowed to have a loved one (eg, Husband) to give you emotional support during delivery?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question: "Did you receive counselling on danger signs after delivery?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      },
+      {
+        title: 0,
+        question: "Did you receive counselling on family planning?",
+        questionType: 0,
+        options: [
+          "Strongly Agree",
+          "Agree",
+          "Neutral",
+          "Disagree",
+          "Strongly Disagree"
+        ],
+        answer: ""
+      }
+    ]
   }
 });
 
 export const getters = {
   getHIVQuestions: state => state.hiv,
   getFamilyPlanningQuestions: state => state.familyPlanning,
+  getQualityImprovementSystemQuestions: state => state.qualityImprovementSystem,
   getQuestionTypes: state => state.questionType
 };
 

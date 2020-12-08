@@ -50,18 +50,16 @@
                           <nuxt-link to="/">Thematic Area</nuxt-link>
                           <ul>
                             <li class="active">
-                              <nuxt-link to="/questions?q=hiv"
-                                >Hiv Questions</nuxt-link
-                              >
+                              <nuxt-link to="/questions?q=hiv">Hiv</nuxt-link>
                             </li>
                             <li class="active">
                               <nuxt-link to="/questions?q=fp"
-                                >Family Planning Questions</nuxt-link
+                                >Family Planning</nuxt-link
                               >
                             </li>
                             <li class="active">
-                              <nuxt-link to="/index2"
-                                >Delivery Questions</nuxt-link
+                              <nuxt-link to="/questions?q=delivery"
+                                >Delivery</nuxt-link
                               >
                             </li>
                           </ul>
@@ -75,7 +73,8 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 d-md-block d-none">
               <div class="urgent-call text-right">
-                <nuxt-link to="/questions" class="btn">Take Test</nuxt-link>
+                <nuxt-link to="/account/login" class="btn">Dashboard</nuxt-link>
+                <!-- <nuxt-link to="/questions" class="btn">Take Test</nuxt-link> -->
               </div>
             </div>
           </div>
@@ -89,6 +88,7 @@
 <script>
 export default {
   name: "NavTwo",
+
   data() {
     return {
       sticky: false
